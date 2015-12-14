@@ -1,0 +1,35 @@
+Enable ctrl+shift+right click => get command info in visual studio, run EnableVSIPLoggingVS2010.reg.
+http://www.fun4jimmy.com/?p=217
+
+The environment commands are defined in a set of four .vsct files:
+- SharedCmdDef.vsct
+- SharedCmdPlace.vsct
+- ShellCmdDef.vsct
+- ShellCmdPlace.vsct
+These files are located in <Visual Studio SDK installation path>\VisualStudioIntegration\Common\Inc\. 
+These files provide the definitions and GUIDs of the menus and groups that you can use in the command 
+table configuration (.vsct) file of your VSPackage as containers for your own menus, groups, and commands.
+
+Visual studio 2010 SDK SP1 folder for above:
+C:\Program Files (x86)\Microsoft Visual Studio 2010 SDK SP1\VisualStudioIntegration\Common\Inc\
+
+Also, vsshlids.h in the same folder contains numeric IDs, useful for VSIPLogging feature at the top of 
+these notes.
+
+Commands, Menus, and Toolbars: https://msdn.microsoft.com/library/bb164627.aspx
+IDE-Defined Commands, Menus, and Groups: https://msdn.microsoft.com/en-us/library/bb165988.aspx
+
+To debug, set Debug options to External Program and set path to devenv.exe.  Add "/rootsuffix Exp" to 
+arguments to run with "Experimental" hive.  You can reset your experimental hive with the VS SDK 
+start menu item "Reset the Microsoft Visual Studio 2010 SP1 Experimental Instance".  This will copy
+the standard VS hive to the Experimental hive.  You can update the version of the extension installed
+by either uninstalling and reinstalling the .vsix or copying the build output to the install folder, 
+for example: 
+
+C:\Users\jnagy\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Jonathan Nagy\Compare Files\0.3\
+
+Check the Output window during VS debug session and find extension load with file path with window 
+search.  
+
+Note:  If everything is lined up, the experimental installation will update automatically when compiling 
+the project.

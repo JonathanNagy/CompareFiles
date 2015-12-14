@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
+  <Identifier Id="159740ff-0300-42f2-b81a-efad5d95a3bd">
+    <Name>Compare Files</Name>
+    <Author>Jonathan Nagy</Author>
+    <Version>0.30</Version>
+    <Description xml:space="preserve">Control click any two files in Solution explorer and then righ click and select "Compare Files..." and the configured third-party comparison tool will come up show a diff between the two files.</Description>
+    <Locale>1033</Locale>
+    <License>License.txt</License>
+    <MoreInfoUrl>http://visualstudiogallery.msdn.microsoft.com/def5e5e7-f874-423c-8674-a8421490c4ac</MoreInfoUrl>
+    <Icon>CompareFilesIconColor-64x64-48x48-32x32-16x16.ico</Icon>
+    <PreviewImage>CompareFilesScreen.png</PreviewImage>
+    <InstalledByMsi>false</InstalledByMsi>
+    <SupportedProducts>
+      <VisualStudio Version="10.0">
+        <Edition>Pro</Edition>
+      </VisualStudio>
+      <VisualStudio Version="11.0">
+        <Edition>Pro</Edition>
+      </VisualStudio>
+      <VisualStudio Version="12.0">
+        <Edition>Pro</Edition>
+      </VisualStudio>
+      <VisualStudio Version="13.0">
+        <Edition>Pro</Edition>
+      </VisualStudio>
+      <VisualStudio Version="14.0">
+        <Edition>Pro</Edition>
+      </VisualStudio>
+      <VisualStudio Version="15.0">
+        <Edition>Pro</Edition>
+      </VisualStudio>
+    </SupportedProducts>
+    <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.0" />
+  </Identifier>
+  <References>
+    <Reference Id="Microsoft.VisualStudio.MPF" MinVersion="10.0">
+      <Name>Visual Studio MPF</Name>
+    </Reference>
+  </References>
+  <Content>
+    <VsPackage>|%CurrentProject%;PkgdefProjectOutputGroup|</VsPackage>
+  </Content>
+</Vsix>
